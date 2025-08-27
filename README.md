@@ -66,11 +66,15 @@ Application config can be adjusted in:
 src/main/resources/application.properties
 ```
 
+---
+
 Developer Notes
 
 Ensure you have Java 17+ installed.
 Maven will handle dependencies automatically.
 Frontend is static and requires no build step.
+
+---
 
 License
 
