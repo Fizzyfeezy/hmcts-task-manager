@@ -48,3 +48,31 @@ API Root Endpoint: http://localhost:8080/api/tasks
 | **GET**    | `/api/tasks/{id}`        | Retrieve task by ID |
 | **PUT**    | `/api/tasks/{id}/status` | Update task status  |
 | **DELETE** | `/api/tasks/{id}`        | Delete task         |
+
+### 4. Example Task JSON
+```bash
+{
+  "title": "Prepare evidence bundle",
+  "description": "Collect and organize documents",
+  "status": "In Progress",
+  "dueDateTime": "2025-09-01T17:00:00"
+}
+```
+
+### 5. Configuration
+
+Application config can be adjusted in:
+```bash
+src/main/resources/application.properties
+```
+
+Developer Notes
+
+Ensure you have Java 17+ installed.
+Maven will handle dependencies automatically.
+Frontend is static and requires no build step.
+
+License
+
+This project was created as part of the DTS Developer Technical Test.
+
