@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Task Manager</h1>
+    <button id="createTaskBtn">Create New Task</button>
+
+    <table id="tasksTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Due Date</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- tasks will populate here -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Edit Modal -->
+<div id="taskModal" class="modal">
+    <div class="modal-content">
+        <h2 id="modalTitle">Create Task</h2>
+        <label>Title:</label>
+        <input type="text" id="modalTaskTitle">
+        <label>Description:</label>
+        <textarea id="modalTaskDescription"></textarea>
+        <label>Status:</label>
+        <select id="modalTaskStatus">
+            <option value="PENDING">PENDING</option>
+            <option value="IN_PROGRESS">IN_PROGRESS</option>
+            <option value="COMPLETED">COMPLETED</option>
+        </select>
+        <label>Due Date:</label>
+        <input type="datetime-local" id="modalTaskDueDate">
+        <div class="modal-buttons">
+            <button id="saveBtn">Save</button>
+            <button id="deleteBtn">Delete</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<!-- View Modal -->
+<div id="viewModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeViewModal()">&times;</span>
+        <h2>Task Details</h2>
+        <p><strong>Title:</strong> <span id="viewTitle"></span></p>
+        <p><strong>Description:</strong> <span id="viewDescription"></span></p>
+        <p><strong>Status:</strong> <span id="viewStatus"></span></p>
+        <p><strong>Due Date:</strong> <span id="viewDueDate"></span></p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
