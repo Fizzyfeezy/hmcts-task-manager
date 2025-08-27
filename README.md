@@ -28,3 +28,23 @@ The backend is implemented in Java (Spring Boot), and the frontend (HTML, CSS, J
 ```bash
 https://github.com/Fizzyfeezy/hmcts-task-manager.git
 cd hmcts-task-manager
+
+### 2. Build and run the backend using Maven:
+
+mvn clean install
+mvn spring-boot:run
+
+Once the server starts, access the application in your browser:
+
+Frontend UI: http://localhost:8080/
+
+API Root Endpoint: http://localhost:8080/api/tasks
+
+### 3. API Endpoints
+| Method     | Endpoint                 | Description         |
+| ---------- | ------------------------ | ------------------- |
+| **POST**   | `/api/tasks`             | Create a new task   |
+| **GET**    | `/api/tasks`             | Retrieve all tasks  |
+| **GET**    | `/api/tasks/{id}`        | Retrieve task by ID |
+| **PUT**    | `/api/tasks/{id}/status` | Update task status  |
+| **DELETE** | `/api/tasks/{id}`        | Delete task         |
